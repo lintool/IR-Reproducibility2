@@ -1,6 +1,9 @@
-GOV2_LOCATION=/media/Gov2/data
-CW09B_LOCATION=/media/ClueWeb09b/ClueWeb09_English_1
-CW12B_LOCATION=/media/ClueWeb12-B13/DiskB
+GOV2_LOCATION=/tuna1/collections/web/gov2/gov2-corpus
+# GOV2_LOCATION=/media/Gov2/data
+# CW09B_LOCATION=/media/ClueWeb09b/ClueWeb09_English_1
+CW09B_LOCATION=/tuna1/collections/web/ClueWeb09b/ClueWeb09_English_1
+# CW12B_LOCATION=/media/ClueWeb12-B13/DiskB
+CW12B_LOCATION=/tuna1/collections/web/ClueWeb12-B13/DiskB
 
 TOPICS_QRELS=../../topics-and-qrels/
 TREC_EVAL=../../eval/trec_eval.9.0/trec_eval
