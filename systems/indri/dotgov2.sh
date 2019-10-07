@@ -36,13 +36,6 @@ shopt -s nullglob
 INDRI_DIR=(indri-[0-9].[0-9])
 INDRI_TAR=(indri-[0-9].[0-9].tar.gz)
 
-# indri is downloaded from this URL
-# the latest file is here:
-#URL="http://sourceforge.net/projects/lemur/files/latest/download?source=files"
-URL="http://downloads.sourceforge.net/project/lemur/lemur/indri-5.9/indri-5.9.tar.gz"
-
-# (NOTE: using arrays here because glob could have more than one match)
-
 # if there is more than one indri present, exit
 if [[ ${#INDRI_DIR[@]} -gt 1 ]]
 then
@@ -70,6 +63,7 @@ if [[ ${#INDRI_DIR[@]} -eq 0 ]]; then
 		echo "configuring indri..."
 		INDRI_DIR=(indri-[0-9].[0-9])
 		cd ${INDRI_DIR}
+		chmod +x configure
 		./configure
 		echo "makeing indri..."
 		make
