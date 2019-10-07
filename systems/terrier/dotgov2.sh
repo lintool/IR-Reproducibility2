@@ -5,14 +5,10 @@ source ../common.sh
 
 INDEX="singlepass"
 
-if [[ ! -f terrier-4.0.tar.gz ]]; then
-	curl http://www.dcs.gla.ac.uk/~craigm/terrier-4.0.tar.gz> terrier-4.0.tar.gz
-fi
 tar -zxf terrier-4.0.tar.gz
 cd  terrier-4.0
 
 bin/trec_setup.sh $GOV2_LOCATION 2>&1  | tee trec_setup.log
-#mv etc/collection.spec collection.spec && head collection.spec > etc/collection.spec
 
 OPTS="-i -j"
 if [ "$INDEX" == "classical" ];
